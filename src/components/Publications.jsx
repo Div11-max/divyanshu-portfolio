@@ -1,3 +1,4 @@
+
 const publications = [
     {
         status: "Published",
@@ -5,7 +6,8 @@ const publications = [
         venue: "IEEE ICSIT 2026 · IEEE Xplore",
         title:
             "A Timeline-Aware Intelligent Trip Planning System with Integrated En-Route Stops",
-        authors: "Divyanshu Patil, Ribsun Yadav, Parth Dhadke, Vivek Sondagar",
+        authors:
+            "Divyanshu Patil, Ribsun Yadav, Parth Dhadke, Vivek Sondagar",
         link: "https://ieeexplore.ieee.org/document/11765069",
     },
     {
@@ -19,7 +21,9 @@ const publications = [
     },
 ];
 
-
+// Add your actual positions of responsibility here when ready.
+// Keeping this array empty prevents an undefined-variable error.
+const leadership = [];
 
 function Publications() {
     return (
@@ -71,39 +75,54 @@ function Publications() {
                             <p className="mt-4 text-sm leading-6 text-gray-500">
                                 {paper.authors}
                             </p>
+
+                            {/* Publication link */}
+                            {paper.link && (
+                                <a
+                                    href={paper.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition hover:text-blue-300"
+                                >
+                                    View Publication
+                                    <span aria-hidden="true">↗</span>
+                                </a>
+                            )}
                         </article>
                     ))}
                 </div>
 
-                {/* Leadership */}
-                <div className="mt-16">
+                {/* Leadership - displayed only when entries exist */}
+                {leadership.length > 0 && (
+                    <div className="mt-16">
 
-                    <p className="mb-6 text-sm font-medium uppercase tracking-[0.3em] text-gray-500">
-                        Positions of Responsibility
-                    </p>
+                        <p className="mb-6 text-sm font-medium uppercase tracking-[0.3em] text-gray-500">
+                            Positions of Responsibility
+                        </p>
 
-                    <div className="grid gap-5 md:grid-cols-2">
-                        {leadership.map((item) => (
-                            <div
-                                key={item.organisation}
-                                className="rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-white/20 hover:bg-white/[0.04]"
-                            >
-                                <p className="text-sm text-blue-400">
-                                    {item.period}
-                                </p>
+                        <div className="grid gap-5 md:grid-cols-2">
+                            {leadership.map((item) => (
+                                <div
+                                    key={item.organisation}
+                                    className="rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-white/20 hover:bg-white/[0.04]"
+                                >
+                                    <p className="text-sm text-blue-400">
+                                        {item.period}
+                                    </p>
 
-                                <h3 className="mt-4 text-xl font-semibold text-white">
-                                    {item.role}
-                                </h3>
+                                    <h3 className="mt-4 text-xl font-semibold text-white">
+                                        {item.role}
+                                    </h3>
 
-                                <p className="mt-2 text-gray-400">
-                                    {item.organisation}
-                                </p>
-                            </div>
-                        ))}
+                                    <p className="mt-2 text-gray-400">
+                                        {item.organisation}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+
                     </div>
-
-                </div>
+                )}
 
             </div>
         </section>

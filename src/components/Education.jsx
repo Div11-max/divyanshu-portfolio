@@ -12,7 +12,8 @@ const education = [
             "Pursuing a Bachelor's degree in Computer Science with a specialization in Data Science, with a focus on software development, data analytics, machine learning, and artificial intelligence.",
 
         achievements: [
-            "Research paper accepted at IEEE ICSIT 2026",
+            "Research paper published at IEEE ICSIT 2026 (IEEE Xplore)",
+            "Full paper tentatively accepted for oral presentation at ICDEC-2026",
             "Developed multiple projects across Artificial Intelligence, Machine Learning, Data Science, and Software Development",
         ],
 
@@ -84,8 +85,8 @@ function Education() {
                         <article
                             key={item.number}
                             className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-white/20 hover:bg-white/[0.04] lg:p-10 ${item.featured
-                                    ? "border-blue-400/50"
-                                    : ""
+                                ? "border-blue-400/50"
+                                : ""
                                 }`}
                         >
 
@@ -110,8 +111,8 @@ function Education() {
 
                                             <span
                                                 className={`rounded-full border px-3 py-1 text-xs ${item.featured
-                                                        ? "border-blue-400/20 bg-blue-400/10 text-blue-300"
-                                                        : "border-white/10 bg-white/5 text-gray-400"
+                                                    ? "border-blue-400/20 bg-blue-400/10 text-blue-300"
+                                                    : "border-white/10 bg-white/5 text-gray-400"
                                                     }`}
                                             >
                                                 {item.status}

@@ -122,105 +122,81 @@ function Contact() {
                         </p>
                     </div>
 
-                    <div className="grid gap-6 lg:grid-cols-2">
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-                        {/* Software Resume */}
-                        <div className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.04]">
+                        {[
+                            {
+                                label: "Software",
+                                title: "Software Development Resume",
+                                description:
+                                    "Best suited for software development, full-stack, backend, frontend, and engineering roles.",
+                                file: "Divyanshu_Patil_CV_Software.pdf",
+                            },
+                            {
+                                label: "Data",
+                                title: "Data Science Resume",
+                                description:
+                                    "Best suited for data science, machine learning, analytics, AI, and data-focused roles.",
+                                file: "Divyanshu_Patil_CV_DataScience.pdf",
+                            },
+                            {
+                                label: "ATS",
+                                title: "ATS Optimised Resume",
+                                description:
+                                    "A single-column, text-focused format designed to pass applicant tracking systems.",
+                                file: "Divyanshu_Patil_Resume_ATS.pdf",
+                            },
+                        ].map((resume) => (
+                            <div
+                                key={resume.file}
+                                className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.04]"
+                            >
 
-                            <div className="flex items-start justify-between">
+                                <div className="flex items-start justify-between">
 
-                                <div>
-                                    <span className="text-sm uppercase tracking-[0.2em] text-blue-400">
-                                        Software
+                                    <div>
+                                        <span className="text-sm uppercase tracking-[0.2em] text-blue-400">
+                                            {resume.label}
+                                        </span>
+
+                                        <h3 className="mt-4 text-2xl font-semibold text-white">
+                                            {resume.title}
+                                        </h3>
+                                    </div>
+
+                                    <span className="text-xl text-gray-600 group-hover:text-blue-400">
+                                        ↗
                                     </span>
 
-                                    <h3 className="mt-4 text-2xl font-semibold text-white">
-                                        Software Development Resume
-                                    </h3>
                                 </div>
 
-                                <span className="text-xl text-gray-600 group-hover:text-blue-400">
-                                    ↗
-                                </span>
+                                <p className="mt-4 text-sm leading-6 text-gray-500">
+                                    {resume.description}
+                                </p>
 
-                            </div>
+                                <div className="mt-7 flex flex-wrap gap-3">
 
-                            <p className="mt-4 text-sm leading-6 text-gray-500">
-                                Best suited for software development, full-stack,
-                                backend, frontend, and engineering roles.
-                            </p>
+                                    <a
+                                        href={`/resumes/${resume.file}`}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition hover:bg-gray-200"
+                                    >
+                                        View PDF ↗
+                                    </a>
 
-                            <div className="mt-7 flex flex-wrap gap-3">
+                                    <a
+                                        href={`/resumes/${resume.file}`}
+                                        download={resume.file}
+                                        className="rounded-full border border-white/10 px-5 py-2.5 text-sm text-gray-300 transition hover:border-white/30 hover:text-white"
+                                    >
+                                        Download ↓
+                                    </a>
 
-                                <a
-                                    href="/documents/Divyanshu_Patil_Software.pdf"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition hover:bg-gray-200"
-                                >
-                                    View PDF ↗
-                                </a>
-
-                                <a
-                                    href="/documents/Divyanshu_Patil_Software.pdf"
-                                    download="Divyanshu_Patil_Software.pdf"
-                                    className="rounded-full border border-white/10 px-5 py-2.5 text-sm text-gray-300 transition hover:border-white/30 hover:text-white"
-                                >
-                                    Download ↓
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                        {/* Data Resume */}
-                        <div className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.04]">
-
-                            <div className="flex items-start justify-between">
-
-                                <div>
-                                    <span className="text-sm uppercase tracking-[0.2em] text-blue-400">
-                                        Data
-                                    </span>
-
-                                    <h3 className="mt-4 text-2xl font-semibold text-white">
-                                        Data Science Resume
-                                    </h3>
                                 </div>
 
-                                <span className="text-xl text-gray-600 group-hover:text-blue-400">
-                                    ↗
-                                </span>
-
                             </div>
-
-                            <p className="mt-4 text-sm leading-6 text-gray-500">
-                                Best suited for data science, machine learning,
-                                analytics, AI, and data-focused roles.
-                            </p>
-
-                            <div className="mt-7 flex flex-wrap gap-3">
-
-                                <a
-                                    href="/documents/Data_Resume.pdf"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition hover:bg-gray-200"
-                                >
-                                    View PDF ↗
-                                </a>
-
-                                <a
-                                    href="/documents/Data_Resume.pdf"
-                                    download="Data_Resume.pdf"
-                                    className="rounded-full border border-white/10 px-5 py-2.5 text-sm text-gray-300 transition hover:border-white/30 hover:text-white"
-                                >
-                                    Download ↓
-                                </a>
-
-                            </div>
-
-                        </div>
+                        ))}
 
                     </div>
                 </div>

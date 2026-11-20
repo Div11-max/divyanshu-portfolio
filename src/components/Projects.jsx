@@ -4,17 +4,69 @@ const projects = [
         featured: true,
         title: "AI-Based Timeline-Aware Intelligent Trip Planning System",
         description:
-            "An AI-powered trip planning system focused on timeline-aware route optimization, intelligent en-route stop recommendations, and constraint-based planning.",
+            "A constraint-aware route planner that models the road network as a weighted graph (distance, time, fuel cost, toll charges) and validates budget and travel-time constraints during path exploration. It also recommends intelligent en-route stops within the planned timeline. The prototype is built in Python with the Google Maps Directions API.",
         tags: [
-            "Artificial Intelligence",
+            "Python",
+            "Google Maps Directions API",
+            "Graph Algorithms",
             "Route Optimization",
             "Constraint-Based Planning",
         ],
-        status: "IEEE ICSIT 2026",
+        status: "Published · IEEE ICSIT 2026",
     },
 
     {
         number: "02",
+        featured: true,
+        title: "JudiSmart — Judicial Case Duration Prediction",
+        description:
+            "A machine learning framework that predicts case-disposal duration and supports explainable prioritization of pending cases, built on about 8 crore Indian e-Courts records (2010–2018) with 69 engineered features. The final LightGBM model, trained on 51.9 million cases and tested on 7.3 million unseen 2018 cases, reached an MAE of 99.26 days, with 86.66% of predictions within ±180 days.",
+        tags: [
+            "Python",
+            "LightGBM",
+            "CatBoost",
+            "XGBoost",
+            "Machine Learning",
+            "LegalTech",
+        ],
+        status: "ICDEC-2026 · Tentatively Accepted",
+    },
+
+    {
+        number: "03",
+        featured: true,
+        title: "Informal Settlement Detection & Growth Forecasting in Mumbai",
+        description:
+            "A computer vision pipeline that detects informal settlements from aerial imagery of 14 Mumbai locations (2017–2025). 957 images were tiled into 3,609 patches, and a location-disjoint U-Net was trained on quality-filtered pseudo-labels (Dice 0.727, IoU 0.581 agreement on 802 held-out tiles). Persistence, linear, and quadratic forecasts were compared with rolling-origin validation (MAE 1.55 percentage points).",
+        tags: [
+            "Python",
+            "PyTorch",
+            "OpenCV",
+            "U-Net",
+            "Image Segmentation",
+            "Aerial Imagery",
+        ],
+        status: "Computer Vision",
+    },
+
+    {
+        number: "04",
+        featured: false,
+        title: "Hindi Fake News Detection",
+        description:
+            "An NLP project for detecting misleading Hindi news using text preprocessing and TF-IDF features. It compares TF-IDF-based classifiers and uses a calibrated linear Support Vector Machine for the final predictions.",
+        tags: [
+            "Python",
+            "NLP",
+            "TF-IDF",
+            "Linear SVM",
+            "Text Classification",
+        ],
+        status: "Natural Language Processing",
+    },
+
+    {
+        number: "05",
         featured: false,
         title: "Image Based Vehicle Classification",
         description:
@@ -31,13 +83,14 @@ const projects = [
     },
 
     {
-        number: "03",
+        number: "06",
         featured: false,
         title: "Accident Severity Prediction",
         description:
             "A machine learning project focused on predicting accident severity, achieving 75.52% accuracy while improving recall for the minority class.",
         tags: [
-            "Machine Learning",
+            "Python",
+            "LightGBM",
             "Classification",
             "Model Evaluation",
         ],
@@ -45,7 +98,7 @@ const projects = [
     },
 
     {
-        number: "04",
+        number: "07",
         featured: false,
         title: "Smart Power Distribution System",
         description:
@@ -62,7 +115,23 @@ const projects = [
     },
 
     {
-        number: "05",
+        number: "08",
+        featured: false,
+        title: "Lung Tissue Classification using Hybrid Model",
+        description:
+            "A medical image analysis project applying Artificial Intelligence and Deep Learning techniques. A hybrid model integrating Convolutional Neural Networks and Machine Learning algorithms was developed to classify lung tissue images.",
+        tags: [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Deep Learning",
+            "CNN",
+            "Medical Image Analysis",
+        ],
+        status: "Computer Vision",
+    },
+
+    {
+        number: "09",
         featured: false,
         title: "Business Modeling with Visualisation",
         description:
@@ -79,7 +148,7 @@ const projects = [
     },
 
     {
-        number: "06",
+        number: "10",
         featured: false,
         title: "Expense Tracker App",
         description:
@@ -94,7 +163,7 @@ const projects = [
     },
 
     {
-        number: "07",
+        number: "11",
         featured: false,
         title: "College Admission System",
         description:
@@ -106,22 +175,6 @@ const projects = [
             "Problem Solving",
         ],
         status: "Software Development",
-    },
-
-    {
-        number: "08",
-        featured: false,
-        title: "Lung Tissue Classification using Hybrid Model",
-        description:
-            "A medical image analysis project applying Artificial Intelligence and Deep Learning techniques. A hybrid model integrating Convolutional Neural Networks and Machine Learning algorithms was developed to classify lung tissue images.",
-        tags: [
-            "Artificial Intelligence",
-            "Machine Learning",
-            "Deep Learning",
-            "CNN",
-            "Medical Image Analysis",
-        ],
-        status: "Computer Vision",
     },
 ];
 
@@ -144,8 +197,8 @@ function Projects() {
                     </h2>
 
                     <p className="mt-6 text-lg leading-8 text-gray-400">
-                        A selection of projects where I have applied programming,
-                        data science, machine learning, analytics, and
+                        Research and engineering projects across machine
+                        learning, computer vision, NLP, analytics, and
                         algorithmic problem-solving.
                     </p>
                 </div>
@@ -227,187 +280,6 @@ function Projects() {
                     ))}
                 </div>
 
-            </div>
-            {/* Currently Building */}
-            <div className="mt-24">
-
-                {/* Section heading */}
-                <div className="mb-12 max-w-3xl">
-                    <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-blue-400">
-                        Currently Building
-                    </p>
-
-                    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                        What I'm working on.
-                    </h2>
-
-                    <p className="mt-6 text-lg leading-8 text-gray-400">
-                        Ongoing projects where I'm exploring AI, machine learning,
-                        natural language processing, and real-world applications.
-                    </p>
-                </div>
-
-                <div className="grid gap-5 lg:grid-cols-2">
-
-                    {/* 01 — Hindi Fake News Detection */}
-                    <article className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.04] lg:p-10">
-
-                        <div className="absolute -right-24 -top-24 h-60 w-60 rounded-full bg-blue-500/10 blur-[100px]" />
-
-                        <div className="relative">
-
-                            <div className="flex flex-wrap items-center gap-3">
-                                <span className="rounded-full border border-blue-400/20 bg-blue-400/10 px-3 py-1 text-xs text-blue-300">
-                                    In Progress
-                                </span>
-
-                                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-400">
-                                    NLP
-                                </span>
-                            </div>
-
-                            <h3 className="mt-6 text-2xl font-semibold leading-tight text-white sm:text-3xl">
-                                Hindi Fake News Detection
-                            </h3>
-
-                            <p className="mt-5 text-base leading-7 text-gray-400">
-                                An NLP-based project focused on detecting potentially
-                                fake or misleading Hindi news using text preprocessing,
-                                feature engineering, and machine learning-based
-                                classification techniques.
-                            </p>
-
-                            <div className="mt-6 flex flex-wrap gap-2">
-                                {[
-                                    "Python",
-                                    "NLP",
-                                    "Hindi NLP",
-                                    "Text Classification",
-                                    "Machine Learning",
-                                ].map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-400"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-
-                        </div>
-                    </article>
-
-
-                    {/* 02 — JudiSmart */}
-                    <article className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.04] lg:p-10">
-
-                        <div className="absolute -right-24 -top-24 h-60 w-60 rounded-full bg-blue-500/10 blur-[100px]" />
-
-                        <div className="relative">
-
-                            <div className="flex flex-wrap items-center gap-3">
-                                <span className="rounded-full border border-blue-400/20 bg-blue-400/10 px-3 py-1 text-xs text-blue-300">
-                                    In Progress
-                                </span>
-
-                                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-400">
-                                    AI + LegalTech
-                                </span>
-                            </div>
-
-                            <h3 className="mt-6 text-2xl font-semibold leading-tight text-white sm:text-3xl">
-                                JudiSmart — AI-Based Judicial Delay Prediction
-                            </h3>
-
-                            <p className="mt-5 text-base leading-7 text-gray-400">
-                                An AI-powered judicial decision-support system designed
-                                to predict case disposal delays, prioritize pending cases
-                                based on urgency and vulnerability, and recommend suitable
-                                interventions such as Lok Adalat, Fast Track Courts,
-                                Mediation, and Virtual Hearings.
-                            </p>
-
-                            <p className="mt-4 text-base leading-7 text-gray-400">
-                                The system combines Machine Learning, Large Language Models,
-                                and Explainable AI to analyze structured case data and
-                                unstructured legal documents, with an interactive dashboard
-                                for transparent, data-driven decision support.
-                            </p>
-
-                            <div className="mt-6 flex flex-wrap gap-2">
-                                {[
-                                    "Machine Learning",
-                                    "NLP",
-                                    "LLMs",
-                                    "Explainable AI",
-                                    "SHAP",
-                                    "Python",
-                                    "LegalTech",
-                                ].map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-400"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-
-                        </div>
-                    </article>
-
-
-                    {/* 03 — Informal Settlement Detection */}
-                    <article className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.04] lg:p-10">
-
-                        <div className="absolute -right-24 -top-24 h-60 w-60 rounded-full bg-blue-500/10 blur-[100px]" />
-
-                        <div className="relative">
-
-                            <div className="flex flex-wrap items-center gap-3">
-                                <span className="rounded-full border border-blue-400/20 bg-blue-400/10 px-3 py-1 text-xs text-blue-300">
-                                    In Progress
-                                </span>
-
-                                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-400">
-                                    Deep Learning
-                                </span>
-                            </div>
-
-                            <h3 className="mt-6 text-2xl font-semibold leading-tight text-white sm:text-3xl">
-                                Informal Settlement Detection & Growth Prediction
-                            </h3>
-
-                            <p className="mt-5 text-base leading-7 text-gray-400">
-                                A deep learning-based system for detecting and mapping
-                                informal settlements in Mumbai using multi-temporal
-                                aerial imagery, estimating settlement area, and
-                                predicting future growth patterns.
-                            </p>
-
-                            <div className="mt-6 flex flex-wrap gap-2">
-                                {[
-                                    "Deep Learning",
-                                    "Computer Vision",
-                                    "Image Segmentation",
-                                    "U-Net",
-                                    "DeepLabV3+",
-                                    "ConvLSTM",
-                                    "Aerial Imagery",
-                                ].map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-400"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-
-                        </div>
-                    </article>
-
-                </div>
             </div>
         </section>
     );

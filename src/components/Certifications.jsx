@@ -1,4 +1,13 @@
+
 const certifications = [
+    {
+        title: "Managing Projects with AI",
+        organization: "AI CERTs",
+        platform: "Coursera",
+        date: "Oct 2026",
+        category: "Project Management",
+        file: "/certificates/ai-certs-managing-projects-with-ai.pdf",
+    },
     {
         title: "Foundations of Data Science",
         organization: "Google",
@@ -108,7 +117,7 @@ function Certifications() {
                 {/* Heading */}
                 <div className="mb-16 max-w-3xl">
                     <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-blue-400">
-                        Certifications
+                        Certifications & Experience
                     </p>
 
                     <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -117,63 +126,140 @@ function Certifications() {
 
                     <p className="mt-6 text-lg leading-8 text-gray-400">
                         Certifications, technical training, and professional
-                        credentials that reflect my continuous learning.
+                        credentials that reflect my continuous learning and
+                        practical experience.
                     </p>
                 </div>
 
                 {/* Certifications */}
-                <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                    {certifications.map((certificate) => (
-                        <article
-                            key={certificate.title}
-                            className="group flex flex-col rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.04]"
-                        >
-                            <div className="flex items-start justify-between gap-4">
+                <div>
+                    <div className="mb-8">
+                        <h3 className="text-2xl font-semibold text-white">
+                            Certifications
+                        </h3>
+                        <p className="mt-2 text-sm text-gray-500">
+                            Professional courses and technical credentials.
+                        </p>
+                    </div>
 
-                                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-400/20 bg-blue-400/10 text-lg font-semibold text-blue-400">
-                                    {certificate.organization.charAt(0)}
+                    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                        {certifications.map((certificate) => (
+                            <article
+                                key={certificate.title}
+                                className="group flex flex-col rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.04]"
+                            >
+                                <div className="flex items-start justify-between gap-4">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-400/20 bg-blue-400/10 text-lg font-semibold text-blue-400">
+                                        {certificate.organization.charAt(0)}
+                                    </div>
+
+                                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-500">
+                                        {certificate.date}
+                                    </span>
                                 </div>
 
-                                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-500">
-                                    {certificate.date}
-                                </span>
+                                <div className="mt-7 flex-1">
+                                    <p className="text-sm font-medium text-blue-400">
+                                        {certificate.organization}
+                                    </p>
 
-                            </div>
+                                    <h4 className="mt-2 text-xl font-semibold leading-snug text-white">
+                                        {certificate.title}
+                                    </h4>
 
-                            <div className="mt-7 flex-1">
+                                    <p className="mt-3 text-sm text-gray-500">
+                                        {certificate.platform}
+                                    </p>
 
-                                <p className="text-sm font-medium text-blue-400">
-                                    {certificate.organization}
-                                </p>
+                                    <span className="mt-5 inline-block rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-400">
+                                        {certificate.category}
+                                    </span>
+                                </div>
 
-                                <h3 className="mt-2 text-xl font-semibold leading-snug text-white">
-                                    {certificate.title}
-                                </h3>
+                                <a
+                                    href={certificate.file}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-7 flex items-center justify-between border-t border-white/10 pt-5 text-sm font-medium text-gray-400 transition hover:text-white"
+                                >
+                                    <span>View Certificate</span>
+                                    <span className="text-lg text-blue-400 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                                        ↗
+                                    </span>
+                                </a>
+                            </article>
+                        ))}
+                    </div>
+                </div>
 
-                                <p className="mt-3 text-sm text-gray-500">
-                                    {certificate.platform}
-                                </p>
+                {/* Internships */}
+                <div className="mt-24">
+                    <div className="mb-8">
+                        <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-blue-400">
+                            Professional Experience
+                        </p>
 
-                                <span className="mt-5 inline-block rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-400">
-                                    {certificate.category}
-                                </span>
+                        <h3 className="text-2xl font-semibold text-white">
+                            Internship Experience
+                        </h3>
 
-                            </div>
+                        <p className="mt-2 text-sm text-gray-500">
+                            Practical experience through industry projects
+                            and software development work.
+                        </p>
+                    </div>
 
-                            <a
-                                href={certificate.file}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mt-7 flex items-center justify-between border-t border-white/10 pt-5 text-sm font-medium text-gray-400 transition hover:text-white"
+                    <div className="grid gap-6 lg:grid-cols-2">
+                        {internships.map((internship) => (
+                            <article
+                                key={internship.organization}
+                                className="group rounded-3xl border border-white/10 bg-white/[0.02] p-8 transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.04]"
                             >
-                                <span>View Certificate</span>
-                                <span className="text-lg text-blue-400 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
-                                    ↗
-                                </span>
-                            </a>
+                                <div className="flex flex-wrap items-start justify-between gap-4">
+                                    <div>
+                                        <p className="text-sm font-medium text-blue-400">
+                                            {internship.organization}
+                                        </p>
 
-                        </article>
-                    ))}
+                                        <h4 className="mt-2 text-2xl font-semibold text-white">
+                                            {internship.title}
+                                        </h4>
+                                    </div>
+
+                                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-gray-400">
+                                        {internship.period}
+                                    </span>
+                                </div>
+
+                                <p className="mt-5 text-sm leading-7 text-gray-400">
+                                    {internship.description}
+                                </p>
+
+                                <div className="mt-6 flex flex-wrap gap-2">
+                                    {internship.technologies.map((technology) => (
+                                        <span
+                                            key={technology}
+                                            className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-400"
+                                        >
+                                            {technology}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                <a
+                                    href={internship.file}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-7 flex items-center justify-between border-t border-white/10 pt-5 text-sm font-medium text-gray-400 transition hover:text-white"
+                                >
+                                    <span>View Internship Certificate</span>
+                                    <span className="text-lg text-blue-400 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                                        ↗
+                                    </span>
+                                </a>
+                            </article>
+                        ))}
+                    </div>
                 </div>
 
             </div>

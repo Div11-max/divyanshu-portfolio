@@ -52,6 +52,12 @@ function Navbar() {
                     >
                         Experience
                     </a>
+                    <a
+                        href="#publications"
+                        className="text-gray-300 transition hover:text-white"
+                    >
+                        Publications
+                    </a>
 
                     <a
                         href="#certifications"

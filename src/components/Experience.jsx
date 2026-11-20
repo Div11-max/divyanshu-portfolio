@@ -7,21 +7,22 @@ const experiences = [
         period: "25 May 2026 — 24 July 2026",
 
         description:
-            "Completed a 2-month software development internship working with Python and React JS. Gained practical experience in full-stack development, backend development, frontend integration, and building project features in a real development environment.",
+            "Completed a 2-month software development internship working on a Legal Management System (CRM) built with React.js, Django REST Framework, and PostgreSQL. Designed and integrated REST APIs, implemented JWT-based authentication, and built CRUD modules for core legal workflows.",
 
         highlights: [
-            "Worked with Python and React JS",
-            "Contributed to full-stack development",
-            "Worked on backend development and frontend integration",
-            "Built and contributed to project features",
+            "Designed and integrated REST APIs",
+            "Implemented JWT-based authentication",
+            "Built CRUD modules for Contacts, Clients, Cases, Documents, and Reports",
+            "Collaborated on frontend–backend integration",
         ],
 
         technologies: [
-            "Python",
-            "React JS",
-            "Full-Stack Development",
-            "Backend Development",
-            "Frontend Integration",
+            "React.js",
+            "Django REST Framework",
+            "PostgreSQL",
+            "JWT Authentication",
+            "REST APIs",
+            "Axios",
         ],
 
         certificate: "/certificates/rnr-innotech-internship.pdf",
